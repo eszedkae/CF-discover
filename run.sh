@@ -10,7 +10,7 @@ then
     pip install -r cloudflair/requirements.txt
     apt install ruby -y
 
-elif [ $1 = "scan"] 
+elif [ $1 = "scan" ]
 then
     python3 CloudFail/cloudfail.py --target $2
     python cloudflair/cloudflair.py $2
