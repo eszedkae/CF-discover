@@ -14,3 +14,4 @@ elif [ $1 == "scan"]; then
     python cloudflair/cloudflair.py $2
     bash bypass-firewalls-by-DNS-history/bypass-firewalls-by-DNS-history.sh -d $2
     ruby HatCloud/hatcloud.rb -b $2
+fi
