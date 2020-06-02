@@ -12,8 +12,8 @@ then
 
 elif [ $1 = "scan" ]
 then
-    python3 CloudFail/cloudfail.py --target $2
-    python cloudflair/cloudflair.py $2
-    bash bypass-firewalls-by-DNS-history/bypass-firewalls-by-DNS-history.sh -d $2
-    ruby HatCloud/hatcloud.rb -b $2
+    cd CloudFail/ && python3 cloudfail.py --target $2 && cd ..
+    cd cloudflair/ && python cloudflair.py $2 && cd ..
+    cd bypass-firewalls-by-DNS-history/ && bash bypass-firewalls-by-DNS-history.sh -d $2 && cd ..
+    cd HatCloud/ && ruby hatcloud.rb -b $2 && cd ..
 fi
